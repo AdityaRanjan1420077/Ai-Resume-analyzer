@@ -1,87 +1,116 @@
-# Welcome to React Router!
+ApplyIQ – Resume Tracker
 
-A modern, production-ready template for building full-stack React applications using React Router.
+ApplyIQ is a smart and user-friendly resume tracking web application that helps job seekers manage, track, and analyze resumes efficiently. Users can upload resumes, view detailed feedback, monitor scores, and gain insights for career growth, all through a modern, responsive interface.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+🌐 Live Demo: https://ai-resume-analyzer-tracker-ashen.vercel.app/
 
-## Features
+Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+📄 Upload & Manage Resumes – Easily add multiple resumes and organize them.
 
-## Getting Started
+🔹 Detailed Resume Analytics – View scores, feedback, and areas of improvement.
 
-### Installation
+🖼️ Resume Preview – Preview uploaded resumes directly in the app.
 
-Install the dependencies:
+🧩 Resume Summary – Track and categorize resumes by role, company, or status.
 
-```bash
+🌐 Responsive Design – Works seamlessly across desktop, tablet, and mobile.
+
+🔐 Authentication – Secure login and session management.
+
+🗑️ Wipe App Data – Delete all resumes and clear stored data for testing or reset.
+Project Structure
+
+ApplyIQ/
+├─ src/
+│  ├─ app/
+│  │  ├─ components/
+│  │  │  ├─ Accordion.tsx
+│  │  │  ├─ ATS.tsx
+│  │  │  ├─ Details.tsx
+│  │  │  ├─ FileUploader.tsx
+│  │  │  ├─ Navbar.tsx
+│  │  │  ├─ ResumeCard.tsx
+│  │  │  ├─ ScoreBadge.tsx
+│  │  │  ├─ ScoreCircle.tsx
+│  │  │  ├─ ScoreGauge.tsx
+│  │  │  └─ Summary.tsx
+│  │  ├─ lib/
+│  │  │  ├─ pdf2img.ts       # Converts PDF resumes to image previews
+│  │  │  ├─ puter.ts         # Auth, FS, KV, AI utilities
+│  │  │  └─ util.ts          # Helper functions
+│  │  ├─ routes/
+│  │  │  ├─ auth.tsx
+│  │  │  ├─ home.tsx
+│  │  │  ├─ resume.tsx
+│  │  │  ├─ upload.tsx
+│  │  │  └─ wipe.tsx
+│  │  └─ constants/
+│  │     └─ index.ts
+├─ public/
+│  ├─ icons/
+│  ├─ images/
+│  ├─ favicon.ico
+│  └─ pdf.worker.min.mjs
+├─ package.json
+├─ tailwind.config.js
+├─ postcss.config.js
+├─ tsconfig.json
+└─ README.md
+
+Installation
+
+1. Clone the repository:
+
+git clone https://github.com/yourusername/ApplyIQ.git
+cd ApplyIQ
+
+2. Install dependencies:
+
 npm install
-```
+# or
+yarn install
 
-### Development
+3. Start the development server:
 
-Start the development server with HMR:
-
-```bash
 npm run dev
-```
+# or
+yarn dev
 
-Your application will be available at `http://localhost:5173`.
+Usage
 
-## Building for Production
+Register/Login – Access the dashboard securely.
 
-Create a production build:
+Upload Resumes – Use the FileUploader to add resumes in PDF format.
 
-```bash
-npm run build
-```
+View Resume Analytics – See score badges, summary, and detailed feedback.
 
-## Deployment
+Preview Resumes – Check resumes directly inside the app with the ATS viewer.
 
-### Docker Deployment
+Organize & Track – Categorize resumes and track their progress.
 
-To build and run using Docker:
+Optional: Wipe Data – Use the wipe route to delete all resumes and clear app storage (for testing or reset purposes).
 
-```bash
-docker build -t my-app .
+Technologies Used
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+Technologies Used
 
-The containerized application can be deployed to any platform that supports Docker, including:
+🛠️ React 18 + TypeScript – Frontend development with type safety and modern features.
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+🎨 Tailwind CSS – Responsive and utility-first styling for fast UI development.
 
-### DIY Deployment
+🔀 React Router v7 – Efficient routing between pages.
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+🗃️ usePuterStore – Custom store for authentication, file storage, and AI utilities.
 
-Make sure to deploy the output of `npm run build`
+📄 PDF.js – Rendering and converting PDFs for previews.
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+🔧 Git/GitHub – Version control and project management.
 
-## Styling
+Contributing
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Fork the repository and create a new branch for each feature or bug fix.
 
----
+Ensure code is clean and well-commented.
 
-Built with ❤️ using React Router.
+Submit pull requests for review.
